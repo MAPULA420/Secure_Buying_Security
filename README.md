@@ -13,23 +13,22 @@ needs to protect accounts and keep records that nobody can quietly change.
 
 ## What This Toolkit Does
 
-1. **Secure accounts**: password strength checking, BCrypt hashing, and
-   account lockout after repeated failed logins.
-2. **Tamper-evident audit log**: every transaction event is chained to the
-   previous one with SHA-256, so any edit to an old entry is detected.
+1. **Password strength checker**: rates a password, explains what is weak
+   about it, and flags common passwords.
+2. **Secure registration**: rejects weak passwords and stores only a BCrypt
+   hash, never the password itself.
 3. **Threat model**: a STRIDE analysis of how an escrow marketplace can be
-   attacked and which part of the toolkit defends against each threat.
-4. **Fraud pattern detector** (stretch goal): flags suspicious transaction
-   patterns from sample data.
+   attacked and which part of the toolkit defends against each threat
+   (see `docs/threat-model.md`).
 
 ## Built With
 
 - Java 25
 - Maven
 - BCrypt (password hashing)
-- SHA-256 (built into Java)
 
 ## How to Run
 
     mvn compile
-    mvn exec:java
+    mvn exec:java "-Dexec.args=check"
+    mvn exec:java "-Dexec.args=register"
