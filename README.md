@@ -1,7 +1,6 @@
 # Secure Buying Security
 
-A command-line security toolkit written in Java, built to protect an escrow-style online marketplace such as [Secure_Buying](https://github.com/MAPULA420/Secure_Buying).
-
+A command-line security toolkit written in Java, built to protect an app [Secure_Buying](https://github.com/MAPULA420/Secure_Buying).
 ## The Problem
 
 Buyers and sellers on social media platforms face scams every day: fake proof of payment, false "item not received" claims, wrong items sent, and stolen accounts. An escrow app holds the money until the deal is done, but it also needs to protect accounts and keep records that nobody can quietly change.
